@@ -1,0 +1,22 @@
+#: Application configuration
+server:
+  port: 8091
+
+spring:
+  batch:
+      initialize-schema: always
+  application:
+    name: spring-batch-client
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/pocs
+    username: pocs
+    password: poc123
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: user123
+    virtual-host: /
+    consumer: SEND_INVENTORY
+    producer: SEND_IMPORTER

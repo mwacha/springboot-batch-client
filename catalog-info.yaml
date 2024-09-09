@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: springbatch-client
+  tags:
+    - java
+  description: |
+    Microsserviço responsável pelo processamento batch
+  links:
+    - title: Website
+      url: https://github.com/mwacha/springbatch-client
+  annotations:
+    backstage.io/adr-location: docs/adr
+    github.com/project-slug: mwacha/springbatch-client
+    sonarqube.org/project-key: default/com.github.mwacha:springbatch-client
+    jenkins.io/github-folder: microservices/springbatch-client/cd
+spec:
+  type: service
+  lifecycle: production
+  owner: {{team_owner}}
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name:springbatch-client
+spec:
+  type: openapi
+  lifecycle: production
+  owner: springbatch-client
+  definition:
+    $text: http://localhost:8091/v3/api-docs
