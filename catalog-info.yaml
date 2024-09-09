@@ -30,9 +30,9 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: springboot-batch-client
-spec:
-  type: openapi
-  lifecycle: production
-  owner: mwacha
+#spec:
+#  type: openapi
+#  lifecycle: production
+#  owner: mwacha
 #  definition:
 #    $text: http://localhost:8091/v3/api-docs
