@@ -34,5 +34,5 @@ spec:
   type: openapi
   lifecycle: production
   owner: mwacha
-  definition:
-    $text: http://localhost:8091/v3/api-docs
+#  definition:
+#    $text: http://localhost:8091/v3/api-docs
