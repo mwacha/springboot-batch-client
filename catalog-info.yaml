@@ -29,7 +29,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name:springboot-batch-client
+  name: springboot-batch-client
 spec:
   type: openapi
   lifecycle: production
