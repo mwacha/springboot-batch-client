@@ -23,16 +23,16 @@ spec:
       title: "Swagger UI"           # Link para a documentação Swagger
     - url: "http://localhost:8091/actuator"
       title: "Actuator"             # Link para o Actuator
-#
-#
-#---
-#apiVersion: backstage.io/v1alpha1
-#kind: API
-#metadata:
-#  name:springboot-batch-client
-#spec:
-#  type: openapi
-#  lifecycle: production
-#  owner: springboot-batch-client
-#  definition:
-#    $text: http://localhost:8091/v3/api-docs
+
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name:springboot-batch-client
+spec:
+  type: openapi
+  lifecycle: production
+  owner: mwacha
+  definition:
+    $text: http://localhost:8091/v3/api-docs
