@@ -12,11 +12,10 @@ metadata:
   annotations:
     backstage.io/adr-location: docs/adr
     github.com/project-slug: mwacha/springboot-batch-client
-    sonarqube.org/project-key: default/com.github.mwacha:springboot-batch-client
-    jenkins.io/github-folder: microservices/springboot-batch-client/cd
+
 spec:
   type: service
-  lifecycle: production
+  lifecycle: test
   owner: mwacha
 
 ---
