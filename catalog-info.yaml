@@ -1,31 +1,22 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: springboot-batch-client
+  name: demo-microservice          # Nome do seu microserviço
+  description: "Exemplo de microsserviço Spring Boot com API Swagger"
+  owner: equipe-exemplo            # Nome da equipe responsável pelo microserviço
   tags:
-    - java
-  description: |
-    Microsserviço responsável pelo processamento batch
-#  links:
-#    - title: Website
-#      url: https://github.com/mwacha/springboot-batch-client
-#  annotations:
-#    backstage.io/adr-location: docs/adr
-#    github.com/project-slug: mwacha/springboot-batch-client
-#
-#spec:
-#  type: service
-#  lifecycle: test
-#  owner: mwacha
-#
-#---
-#apiVersion: backstage.io/v1alpha1
-#kind: API
-#metadata:
-#  name:springboot-batch-client
-#spec:
-#  type: openapi
-#  lifecycle: production
-#  owner: springboot-batch-client
-#  definition:
-#    $text: http://localhost:8091/v3/api-docs
+    - springboot
+    - swagger
+spec:
+  type: service                    # Tipo do componente
+  lifecycle: production            # Ciclo de vida do componente
+  owner: mwacha         # Proprietário do serviço (adicionado aqui no spec)
+  system: backend                  # Sistema ao qual o serviço pertence
+  providesApis:
+    - "hello-api"                  # API fornecida pelo serviço
+  consumesApis: []                 # APIs consumidas (se houver)
+  links:
+    - url: "http://localhost:8080/swagger-ui.html"
+      title: "Swagger UI"           # Link para a documentação Swagger
+    - url: "http://localhost:8080/actuator"
+      title: "Actuator"             # Link para o Actuator
